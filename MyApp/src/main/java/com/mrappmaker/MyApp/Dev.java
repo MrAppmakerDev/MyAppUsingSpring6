@@ -3,10 +3,10 @@ package com.mrappmaker.MyApp;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component // dependency injection
 public class Dev {
 
-    @Autowired // it connects both classes without requiring to create an instance
+    @Autowired // it connects both classes without requiring to create an instance | field injection
     private Laptop laptop;
 
     public void build() {
