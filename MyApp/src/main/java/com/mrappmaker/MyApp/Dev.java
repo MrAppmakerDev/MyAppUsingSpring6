@@ -7,9 +7,14 @@ import org.springframework.stereotype.Component;
 public class Dev {
 
 //    @Autowired // it connects both classes without requiring to create an instance | field injection
-    private final Laptop laptop;
+    private Laptop laptop;
 
-    public Dev(Laptop laptop) { // constructor injection
+//    public Dev(Laptop laptop) { // constructor injection
+//        this.laptop = laptop;
+//    }
+
+    @Autowired // setter injection
+    public void setLaptop(Laptop laptop) {
         this.laptop = laptop;
     }
 
