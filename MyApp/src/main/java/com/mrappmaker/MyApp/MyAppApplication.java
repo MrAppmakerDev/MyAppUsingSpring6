@@ -12,7 +12,7 @@ public class MyAppApplication {
 		ApplicationContext context = SpringApplication.run(MyAppApplication.class, args);
 
 		Dev obj = context.getBean(Dev.class); // explicitly creating in heap memory
-		obj.build(); // now calling an spring component method
+		obj.build(); // now calling a spring component method
 //		Dev.build(); // calling a static method
 	}
 
