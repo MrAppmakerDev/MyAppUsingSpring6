@@ -2,16 +2,17 @@ package com.mrappmaker.MyApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
 
 @SpringBootApplication
 public class MyAppApplication {
 
 	public static void main(String[] args) {
 
-		SpringApplication.run(MyAppApplication.class, args);
+		ApplicationContext context = SpringApplication.run(MyAppApplication.class, args);
 
-//		Dev obj = new Dev(); // explicitly creating in heap memory
-//		obj.build(); // calling an instance method
+		Dev obj = context.getBean(Dev.class); // explicitly creating in heap memory
+		obj.build(); // now calling an spring component method
 //		Dev.build(); // calling a static method
 	}
 
